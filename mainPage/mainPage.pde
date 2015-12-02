@@ -1,13 +1,12 @@
+PImage backGroundImage;
+
 void setup()
 {
-  size(1920, 1080);
+  fullScreen();
+  backGroundImage = loadImage("bakgrund.jpg");
 }
 
-void mousePressed(){
- if(mouseX< && mouseX> && mouseY< && mouseY> ){
-   day1();
- }
-}
 void draw()
 {
+  image(backGroundImage,0,0,width,height);
 }
