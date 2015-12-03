@@ -2,6 +2,13 @@ PImage backGroundImage;
 int rainColor = 255;
 int numOfDrops = 100;
 Snow[] _snow = new Snow[numOfDrops];
+int elThick = 5;
+int _width = 75;
+int _height = 75;
+int time = 0;
+int timer;
+int count = 0;
+int count2 = 0;
 
 void setup()
 {
@@ -13,10 +20,15 @@ void setup()
     _snow[i] = new Snow();
   }
 }
-
+void mouseClicked() {
+  if (grid(100, 920, _width, _height)) {
+    doorOpen(100, 920, _width, _height);
+  }
+}
 void draw()
 {
-  
+  mouseClicked();
+  timer = millis();
   image(backGroundImage,0,0,width,height);
   santaWalking();
   noStroke();
