@@ -1,101 +1,74 @@
-int rainColor = 255;
-int numOfDrops = 100;
-
-Rain[] _rain = new Rain[numOfDrops];
-
-void setup()
+class Snow
 {
-
-  size(1920, 1080);
-  for (int i = 0; i < _rain.length; i++)
-  {
-    _rain[i] = new Rain();
-  }
-}
-
-void draw()
-
-{
-
-
-  background(0);
-  fill(rainColor);
-  smooth();
-  for (int i = 0; i < _rain.length; i++)
-  {
-    _rain[i].circle();
-  }
-}
-
-
-class Rain
-{
-  float rainX = random(2000);
-  float rainY = random(-2300);
-  float rainX2 = random(2000);
-  float rainY2 = random(-2300);
-  float rainX3 = random(2000);
-  float rainY3 = random(-2300);
-  float rainX4 = random(2000);
-  float rainY4 = random(-2300);
-  float rainX5 = random(2000);
-  float rainY5 = random(-2300);
+  float snowX = random(-500,2000);
+  float snowY = random(-2300);
+  float snowX2 = random(-500,2000);
+  float snowY2 = random(-2300);
+  float snowX3 = random(-500,2000);
+  float snowY3 = random(-2300);
+  float snowX4 = random(2500);
+  float snowY4 = random(-2300);
+  float snowX5 = random(-500,2000);
+  float snowY5 = random(-2300);
 
 
 
   void circle()
   {
     fill(255, 255, 255, 110);
-    ellipse(rainX, rainY, 9, 9);
+    ellipse(snowX, snowY, 9, 9);
     fill(255, 255, 255, 85);
-    ellipse(rainX2, rainY2, 7, 7);
+    ellipse(snowX2, snowY2, 7, 7);
     fill(255, 255, 255, 150);
-    ellipse(rainX3, rainY3, 11, 11);
+    ellipse(snowX3, snowY3, 11, 11);
     fill(255, 255, 255, 100);
-    ellipse(rainX4, rainY4, 9, 9);
+    ellipse(snowX4, snowY4, 9, 9);
     fill(255, 255, 255, 90);
-    ellipse(rainX5, rainY5, 6, 6);
-    rainX = rainX + 0.4;
-    rainY = rainY +1;
-    if (rainY>height)
+    ellipse(snowX5, snowY5, 6, 6);
+
+    snowX = snowX + 0.1;
+    snowY = snowY +1;
+    if (snowY>height)
     {
-      rainX = random(2000);
-      rainY = -200;
+      snowX = random(2000);
+      snowY = -200;
     }
 
-    rainX2 = rainX2 + 0.2;
-    rainY2 = rainY2 + 1.4;
+    snowX2 = snowX2 + 0.3;
+    snowY2 = snowY2 + 1.4;
 
-    if (rainY2>height)
+    if (snowY2>height)
     {
-      rainX2 = random(2000);
+      snowX2 = random(2000);
 
-      rainY2 = -200;
+      snowY2 = -200;
     }
-    rainX3 = rainX3 + 0.1;
-    rainY3 = rainY3 + 1;
 
-    if (rainY3>height)
+    snowX3 = snowX3 + 0.3;
+    snowY3 = snowY3 + 1;
+    if (snowY3>height)
     {
-      rainX3 = random(2000);
-      rainY3 = -200;
+      snowX3 = random(2000);
+
+      snowY3 = -200;
     }
-    rainX4 = rainX4 -0.2;
-    rainY4 = rainY4 + 1.4;
 
-    if (rainY4>height)
+    snowX4 = snowX4 -0.2;
+    snowY4 = snowY4 + 1.4;
+
+    if (snowY4>height)
     {
-      rainX4 = random(2000);
+      snowX4 = random(2000);
 
-      rainY4 = -200;
+      snowY4 = -200;
     }
-    rainX5 = rainX5 -0.7;
-    rainY5 = rainY5 + 1;
+    snowX5 = snowX5 -0.5;
+    snowY5 = snowY5 + 1;
 
-    if (rainY5>height)
+    if (snowY5>height)
     {
-      rainX5 = random(2000);
-      rainY5 = -200;
+      snowX5 = random(2000);
+      snowY5 = -200;
     }
   }
 }
