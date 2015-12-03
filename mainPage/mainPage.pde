@@ -27,12 +27,13 @@ void mouseClicked() {
 }
 void draw()
 {
-  mouseClicked();
   timer = millis();
   image(backGroundImage,0,0,width,height);
   santaWalking();
   noStroke();
-  
+  fill(255);
+      rect(100, 920, _width, _height);
+  mouseClicked();
   
   smooth();
   for (int i = 0; i < _snow.length; i++)
