@@ -35,7 +35,7 @@ void draw()
   timer = millis();
   image(backGroundImage, 0, 0, width, height);
   tint(255, 150);
-  image(moon, 600, -400, 700, 700);
+  //image(moon, 600, -400, 700, 700);
   noTint();
   santaWalking();
   fix();
