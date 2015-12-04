@@ -3,6 +3,7 @@ int rainColor = 255;
 int numOfDrops = 700;
 int numOfStars = 30;
 Snow[] _snow = new Snow[numOfDrops];
+<<<<<<< HEAD
 //PShape[] _stars = new PShape[numOfStars];
 //float _starXPos = random(1920);
 float _starYPos = random(100);
@@ -10,6 +11,16 @@ float _starYPos = random(100);
 //float _starHeight = random(4, 20);
 float _starSize = 0;
 float growth = 0.2;
+=======
+int elThick = 5;
+int _width = 75;
+int _height = 75;
+int time = 0;
+int timer;
+int count = 0;
+int count2 = 0;
+
+>>>>>>> origin/master
 void setup()
 {
   size(1920, 1080);
@@ -21,11 +32,21 @@ void setup()
   }
   //_stars = createShape(ELLIPSE(_starXPos, _starYPos, _starWidth, _starHeight);
 }
-
+void mouseClicked() {
+  if (grid(100, 920, _width, _height)) {
+    doorOpen(100, 920, _width, _height);
+  }
+}
 void draw()
 {
+<<<<<<< HEAD
   background(0);
   image(backGroundImage, 0, 0, width, height);
+=======
+  mouseClicked();
+  timer = millis();
+  image(backGroundImage,0,0,width,height);
+>>>>>>> origin/master
   santaWalking();
   noStroke();
   fill(0);
