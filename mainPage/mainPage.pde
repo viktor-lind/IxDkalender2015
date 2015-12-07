@@ -42,17 +42,13 @@ void setup()
 }
 void draw()
 {
-  image(backGroundImage, 0, 0, width, height);
-  timer = millis();
   
+  timer = millis();
+  image(backGroundImage, 0, 0, width, height);
   tint(255, 150);
-<<<<<<< HEAD
   image(moon, 600, -400, 700, 700);
-=======
-  //image(moon, 600, -400, 700, 700);
->>>>>>> refs/remotes/antonilund/master
   noTint();
-  //santaWalking();
+  santaWalking();
   fix();
   mouse();
   _drawSnowman();
