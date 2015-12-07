@@ -46,7 +46,11 @@ void draw()
   timer = millis();
   
   tint(255, 150);
+<<<<<<< HEAD
   image(moon, 600, -400, 700, 700);
+=======
+  //image(moon, 600, -400, 700, 700);
+>>>>>>> refs/remotes/antonilund/master
   noTint();
   //santaWalking();
   fix();
