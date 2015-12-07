@@ -19,12 +19,22 @@ float growth = 1;
 //Moon image
 PImage moon;
 
+// smoke variables 
+int m2 = millis();
+
+//snowman
+PImage snowman1;
+PImage snowman2;
 void setup()
 {
-  size(1920, 1080);
-  backGroundImage = loadImage("bakgrund.jpg");
+  size(1920, 1080, P2D);
+  
+  backGroundImage = loadImage("background.jpg");
+  
   santa = loadImage("santa.png");
   moon = loadImage("moon.png");
+   snowman1 = loadImage("snowman1.2.png");
+  snowman2 = loadImage("snowman2.1.png");
   for (int i = 0; i < _snow.length; i++)
   {
     _snow[i] = new Snow();
@@ -32,14 +42,16 @@ void setup()
 }
 void draw()
 {
-  timer = millis();
   image(backGroundImage, 0, 0, width, height);
+  timer = millis();
+  
   tint(255, 150);
   image(moon, 600, -400, 700, 700);
   noTint();
-  santaWalking();
+  //santaWalking();
   fix();
   mouse();
+  _drawSnowman();
   noStroke();
   _createStars();
   fill(255);
